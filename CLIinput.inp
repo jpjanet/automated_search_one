@@ -1,0 +1,20 @@
+# molSimplify input file generated from CLI input
+-core Ni 
+-lig diaminomethyl, diaminomethyl, pme3, trifluoromethyl 
+-rundir /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/
+ 
+-jobdir temp 
+-keepHs yes,yes,yes,yes,yes,yes 
+-coord 6 
+-ligalign 1 
+-ligloc 1 
+-calccharge yes 
+-name 1007_Ni_2_eq_33_ax1_41_ax2_10_3
+ 
+-geometry oct 
+-spin 3 
+-oxstate II 
+-qccode TeraChem 
+-runtyp minimize 
+-method UDFT 
+-mopac

@@ -1,0 +1,21 @@
+
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}[node distance =  1cm,auto]
+    % Place nodes
+    \node [block] (init) {$M,\set{L_i}$\\ input };
+   \node [block, right of = init] (complex) {ML \\ complex};
+   \node [block, right of = init,label  = {[xshift=0cm, yshift=0cm,text width=1.5cm, text centered]{\color{blue}{molSimplify} }}] (complex) {ML \\ complex};
+          \node [block, right of = complex,label  = {[xshift=0cm, yshift=0cm,text width=1.5cm, text centered]{\color{red}{-expensive} \color{red}{-inaccurate} }}] (evaluation) {evaluation };      
+\node [block, right of = evaluation, label  = {[xshift=0cm, yshift=0cm, text width=1.2cm,text centered]{\color{blue}{design stragety} }}] (combopt) {Optimizer};
+                \node [block, right of = evaluation, label  = {[xshift=0cm, yshift=0cm, text width=1.2cm,text centered]{\color{red}{-local} \color{red}{-combin.} \color{black}{e.g. GA}}}] (combopt) {Optimizer};
+    \path[line] (init) -- node[above] {} (complex);   
+    \path[line] (complex) -- node[above] {} (evaluation);   
+   \path[line] (evaluation) -- node[above] {} (combopt);   
+   \path[line] (combopt) |- ([xshift=0cm,yshift=-2cm]init.south) -- (init.south);
+   \path[line,dashed,blue] ([xshift=-2.5cm,yshift=0cm]init.west) -- node[above,fontscale=0.25,label={[label distance=0.1cm]90:{initialize}}] {}(init.west);
+   \path[line, blue,dashed] (combopt.east) -- node[above,fontscale=0.25,label={[label distance=0.1cm]90:{Output}}] {}([xshift=2cm,yshift=0cm]combopt.east);
+\end{tikzpicture}
+\end{center}
+\caption{Representation of an example compound as a graph. A representation of oxalate (left), a weighted graph representation with atomic numbers and bond distances (center), and a unweighted representation (right). \label{Fig:grapheq}}
+\end{figure}

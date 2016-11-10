@@ -1,0 +1,934 @@
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+
+Generating complex with ligands and occupations: ['thiane', 'thiane', 'thiane', 'thiane', 'misc', 'ethyl'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 5, 3: 4}, 3)
+('spin checking: ', '2', '4')
+('nn emsg', [])
+('equitorial ligs mismatch: ', ['thiane', 'misc', 'ethyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1008_Cr_3_eq_17_ax1_18_ax2_5_2
+setting charge to be 2
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1008_Cr_3_eq_17_ax1_18_ax2_5_2']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+
+Generating complex with ligands and occupations: ['thiane', 'thiane', 'thiane', 'thiane', 'misc', 'ethyl'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 5, 3: 4}, 3)
+('spin checking: ', '4', '4')
+spin up
+('nn emsg', [])
+('equitorial ligs mismatch: ', ['thiane', 'misc', 'ethyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methylisocy.mol', 'misc', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/ethyl.mol', 'ethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/thiane.mol', 'thiane', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1008_Cr_3_eq_17_ax1_18_ax2_5_4
+setting charge to be 2
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1008_Cr_3_eq_17_ax1_18_ax2_5_4']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+
+Generating complex with ligands and occupations: ['carbonyl', 'carbonyl', 'carbonyl', 'carbonyl', 'methanethiol', 'carbonyl'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 4, 3: 5}, 3)
+('spin checking: ', '1', '5')
+('nn emsg', [])
+('axial ligs mismatch: ', ['methanethiol', 'carbonyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1009_Co_3_eq_16_ax1_38_ax2_16_1
+setting charge to be 2
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1009_Co_3_eq_16_ax1_38_ax2_16_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+
+Generating complex with ligands and occupations: ['carbonyl', 'carbonyl', 'carbonyl', 'carbonyl', 'methanethiol', 'carbonyl'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 4, 3: 5}, 3)
+('spin checking: ', '5', '5')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['methanethiol', 'carbonyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/carbonyl.mol', 'carbonyl', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1009_Co_3_eq_16_ax1_38_ax2_16_5
+setting charge to be 2
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1009_Co_3_eq_16_ax1_38_ax2_16_5']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+
+Generating complex with ligands and occupations: ['en', 'en', 'water', 'phosphine'] ['1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 6, 3: 5}, 3)
+('spin checking: ', '3', '5')
+('nn emsg', [])
+('axial ligs mismatch: ', ['water', 'phosphine'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1000_Mn_3_eq_24_ax1_3_ax2_44_3
+setting charge to be 3
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1000_Mn_3_eq_24_ax1_3_ax2_44_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+
+Generating complex with ligands and occupations: ['en', 'en', 'water', 'phosphine'] ['1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+('incheck', '3')
+('metal in', [2, 3])
+({2: 6, 3: 5}, 3)
+('spin checking: ', '5', '5')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['water', 'phosphine'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/phosphine.mol', 'phosphine', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1000_Mn_3_eq_24_ax1_3_ax2_44_5
+setting charge to be 3
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1000_Mn_3_eq_24_ax1_3_ax2_44_5']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+
+Generating complex with ligands and occupations: ['cyanoaceticporphyrin', 'water', 'tbutylthiol'] ['1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '1', '3')
+('nn emsg', [])
+('axial ligs mismatch: ', ['water', 'tbutylthiol'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1001_Ni_2_eq_36_ax1_3_ax2_40_1
+setting charge to be -1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1001_Ni_2_eq_36_ax1_3_ax2_40_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+
+Generating complex with ligands and occupations: ['cyanoaceticporphyrin', 'water', 'tbutylthiol'] ['1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '3', '3')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['water', 'tbutylthiol'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanoaceticporphyrin.mol', 'cyanoaceticporphyrin', -2)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/water.mol', 'water', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1001_Ni_2_eq_36_ax1_3_ax2_40_3
+setting charge to be -1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1001_Ni_2_eq_36_ax1_3_ax2_40_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+
+Generating complex with ligands and occupations: ['isothiocyanate', 'isothiocyanate', 'isothiocyanate', 'isothiocyanate', 'tbutylthiol', 'isothiocyanate'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '1', '3')
+('nn emsg', [])
+('axial ligs mismatch: ', ['tbutylthiol', 'isothiocyanate'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1002_Ni_2_eq_13_ax1_40_ax2_13_1
+setting charge to be -4
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1002_Ni_2_eq_13_ax1_40_ax2_13_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+
+Generating complex with ligands and occupations: ['isothiocyanate', 'isothiocyanate', 'isothiocyanate', 'isothiocyanate', 'tbutylthiol', 'isothiocyanate'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '3', '3')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['tbutylthiol', 'isothiocyanate'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1002_Ni_2_eq_13_ax1_40_ax2_13_3
+setting charge to be -4
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1002_Ni_2_eq_13_ax1_40_ax2_13_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+
+Generating complex with ligands and occupations: ['acetonitrile', 'acetonitrile', 'acetonitrile', 'acetonitrile', 'methanethiol', 'pyr'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '1', '3')
+('nn emsg', [])
+('axial ligs mismatch: ', ['acetonitrile', 'pyr'], 1)
+('equitorial ligs mismatch: ', ['acetonitrile', 'methanethiol'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1003_Ni_2_eq_4_ax1_38_ax2_9_1
+setting charge to be 1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1003_Ni_2_eq_4_ax1_38_ax2_9_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+
+Generating complex with ligands and occupations: ['acetonitrile', 'acetonitrile', 'acetonitrile', 'acetonitrile', 'methanethiol', 'pyr'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '3', '3')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['acetonitrile', 'pyr'], 1)
+('equitorial ligs mismatch: ', ['acetonitrile', 'methanethiol'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/methanethiol.mol', 'methanethiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/acetonitrile.mol', 'acetonitrile', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1003_Ni_2_eq_4_ax1_38_ax2_9_3
+setting charge to be 1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1003_Ni_2_eq_4_ax1_38_ax2_9_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+
+Generating complex with ligands and occupations: ['tbutylthiol', 'tbutylthiol', 'tbutylthiol', 'tbutylthiol', 'pyr', 'pentacyanopentadienide'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+('incheck', '2')
+('metal in', [2, 3])
+({2: 5, 3: 6}, 2)
+('spin checking: ', '1', '5')
+('nn emsg', [])
+('axial ligs mismatch: ', ['tbutylthiol', 'pentacyanopentadienide'], 1)
+('equitorial ligs mismatch: ', ['tbutylthiol', 'pyr'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1004_Fe_2_eq_40_ax1_9_ax2_43_1
+setting charge to be -3
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1004_Fe_2_eq_40_ax1_9_ax2_43_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+
+Generating complex with ligands and occupations: ['tbutylthiol', 'tbutylthiol', 'tbutylthiol', 'tbutylthiol', 'pyr', 'pentacyanopentadienide'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+('incheck', '2')
+('metal in', [2, 3])
+({2: 5, 3: 6}, 2)
+('spin checking: ', '5', '5')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['tbutylthiol', 'pentacyanopentadienide'], 1)
+('equitorial ligs mismatch: ', ['tbutylthiol', 'pyr'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pyridine.mol', 'pyr', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/tbutylthiol.mol', 'tbutylthiol', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/pentacyanocyclopentadienide.mol', 'pentacyanopentadienide', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1004_Fe_2_eq_40_ax1_9_ax2_43_5
+setting charge to be -3
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1004_Fe_2_eq_40_ax1_9_ax2_43_5']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+
+Generating complex with ligands and occupations: ['nitro', 'nitro', 'nitro', 'nitro', 'isothiocyanate', 'cyanide'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+('incheck', '2')
+('metal in', [2, 3])
+({2: 5, 3: 4}, 2)
+('spin checking: ', '3', '5')
+('nn emsg', [])
+('axial ligs mismatch: ', ['nitro', 'cyanide'], 1)
+('equitorial ligs mismatch: ', ['nitro', 'isothiocyanate'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1005_Cr_2_eq_7_ax1_13_ax2_15_3
+setting charge to be -4
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1005_Cr_2_eq_7_ax1_13_ax2_15_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+
+Generating complex with ligands and occupations: ['nitro', 'nitro', 'nitro', 'nitro', 'isothiocyanate', 'cyanide'] ['1', '1', '1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+('incheck', '2')
+('metal in', [2, 3])
+({2: 5, 3: 4}, 2)
+('spin checking: ', '5', '5')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['nitro', 'cyanide'], 1)
+('equitorial ligs mismatch: ', ['nitro', 'isothiocyanate'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/cyanide.mol', 'cyanide', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/nitro.mol', 'nitro', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/isothiocyanate.mol', 'isothiocyanate', -1)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1005_Cr_2_eq_7_ax1_13_ax2_15_5
+setting charge to be -4
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1005_Cr_2_eq_7_ax1_13_ax2_15_5']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+
+Generating complex with ligands and occupations: ['en', 'en', 'dppe'] ['1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '1', '3')
+('nn emsg', [])
+triple bidentate case
+
+('adding unique ligs', 'en')
+('adding unique ligs', 'dppe')
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('custom ax tcat ', 2)
+ANN call rejected
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1006_Ni_2_eq_24_ax1_30_ax2_30_1
+setting charge to be 2
+WARNING: Generated complex is not good! Minimum distance between atoms:0.62A
+
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1006_Ni_2_eq_24_ax1_30_ax2_30_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+
+Generating complex with ligands and occupations: ['en', 'en', 'dppe'] ['1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '3', '3')
+spin up
+('nn emsg', [])
+triple bidentate case
+
+('adding unique ligs', 'en')
+('adding unique ligs', 'dppe')
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('custom ax tcat ', 2)
+ANN call rejected
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/en.mol', 'en', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/dppe.mol', 'dppe', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1006_Ni_2_eq_24_ax1_30_ax2_30_3
+setting charge to be 2
+WARNING: Generated complex is not good! Minimum distance between atoms:0.41A
+
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1006_Ni_2_eq_24_ax1_30_ax2_30_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+
+Generating complex with ligands and occupations: ['diaminomethyl', 'diaminomethyl', 'pme3', 'trifluoromethyl'] ['1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '1', '3')
+('nn emsg', [])
+('axial ligs mismatch: ', ['pme3', 'trifluoromethyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1007_Ni_2_eq_33_ax1_41_ax2_10_1
+setting charge to be -1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1007_Ni_2_eq_33_ax1_41_ax2_10_1']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************
+
+************************************************************
+******** Welcome to molSimplify! Let's get started. ********
+************************************************************
+
+
+('in inparse, rundir found', ['-rundir', '/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/'])
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+
+Generating complex with ligands and occupations: ['diaminomethyl', 'diaminomethyl', 'pme3', 'trifluoromethyl'] ['1', '1', '1', '1']
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+('incheck', '2')
+('metal in', [2])
+({2: 3}, 2)
+('spin checking: ', '3', '3')
+spin up
+('nn emsg', [])
+('axial ligs mismatch: ', ['pme3', 'trifluoromethyl'], 1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/diaminomethyl.mol', 'diaminomethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/trifluoromethyl.mol', 'trifluoromethyl', -1)
+('/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/Ligands/PMe3.mol', 'pme3', 0)
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1007_Ni_2_eq_33_ax1_41_ax2_10_3
+setting charge to be -1
+
+In folder home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp generated  1  structures!
+rdir is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+jobd is /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp
+TeraChem input files generated!
+Generating MOPAC input
+['/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/temp/1007_Ni_2_eq_33_ax1_41_ax2_10_3']
+
+**************************************************************
+***** Thank you for using molSimplify. Have a nice day! ******
+**************************************************************

@@ -1,0 +1,22 @@
+
+\begin{figure}[H]
+\begin{tikzpicture}[node distance =  2.75cm,auto,fontscale=0.01]
+\linespread{1}
+\node [strategy] (MFO) at (-3.5,0) {MFO \\ methods};
+\node [strategy] (adapt) at (-1,1.5) {adaption};
+\node [strategy] (fus) at (-1,-1.5) {fusion};
+\node [strategy] (cor) at (2,2.5) {add/multi.\\ correction};
+\node [strategy, text width=2cm] (repar) at (2,0.75) {reparameter-ization};
+\node [strategy] (koc) at (2,-1.5) {co-kriging};
+\node [noneblock] (corex) at (8.5,2.5) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq f_{LF}\left(c_i\right) + \xi \left(\mathbf{x}_i \vert \mathbf{x}_j,f(c_j), \forall j<i \right)\label{Eq:clo_sur}&\end{flalign}}};
+\node [noneblock] (corex) at (8.5,0.75) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq f_{LF}\left(c_i, \xi \left(\mathbf{x}_i \vert \mathbf{x}_j,f(c_j), \forall j<i \right) \right)\label{Eq:orp_sur}&\end{flalign}}};
+\node [noneblock,align=left] (corex) at (8.5,-1.5) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq  \xi \left(\mathbf{x}_n,f_{LF}(c_n),\mathbf{x}_m,f(c_m)\right)\label{Eq:co_kr}&\end{flalign}}};
+\path [line] (MFO.north) |- (adapt.west);
+\path [line] (MFO.south) |- (fus.west);
+\path [line] (adapt.north) |- (cor.west);
+\path [line] (adapt.south) |- (repar.west);
+\path [line] (fus.east) |- (koc.west);
+\end{tikzpicture}
+
+\caption{Schematic of classification \cite{Peherstorfer2016a} of multifidelty surrogate ($\tilde{f}$) construction methods as proposed in Aim 2. In each case $\mathbf{x}$ are elements in the descriptor space, $c_i = T^{-1}\mathbf{x}_i$ are corresponding elements in chemical space, $f_{LE}$ is the low fidelity  semiempirical method, $f$ is the DFT objective, $\xi$ is the data-driven function (NN or GP). \label{Fig:MFO}}
+\end{figure}

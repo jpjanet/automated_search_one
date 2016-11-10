@@ -1,0 +1,13 @@
+# file created with molSimplify
+run energy
+min_coordinates cartesian
+maxit 500
+timings yes
+gpus 1
+spinmult 1
+scrdir ./scr
+basis lacvps_ecp
+coordinates 1000_Co_3_eq_18_ax1_14_ax2_18_1.xyz
+charge 3
+method b3lyp
+end

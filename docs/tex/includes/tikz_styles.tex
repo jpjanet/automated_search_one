@@ -1,0 +1,69 @@
+\usetikzlibrary{shapes.arrows,shapes.geometric,arrows,shadows,automata,positioning,arrows,calc}
+\setlength\labelsep   {\dimexpr\labelsep + 1em\relax}  
+\setlength\leftmargini{\dimexpr\leftmargini + 0.5em\relax}
+\usepackage{relsize}
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    \usepackage{pgfplots}
+\pgfplotsset{compat=1.3}
+\tikzset{>=latex}
+\tikzstyle{metal} = [circle, draw, fill=orange!20,minimum size = 1.5cm, 
+    text width=1.25cm, text badly centered, node distance=3cm, inner sep=0pt]
+    \tikzstyle{graphn} = [circle, draw, thick, fill=darkgray!20,minimum size = 0.5cm, 
+    text width=1cm, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{carb} = [circle, draw, fill=gray!20,minimum size = 1cm, 
+    text width=1cm, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{ox} = [circle, draw, fill=red!20,minimum size = 0.5cm, 
+   text width=0.8cm, text badly centered, node distance=3cm, inner sep=0pt]  
+\tikzstyle{decision} = [diamond, draw, fill=green!20, 
+    text width=1.25cm, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, fontscale=0.05,
+    text width=1.5cm, text centered, rounded corners, minimum height=1.5cm]
+\tikzstyle{strategy} = [rectangle, draw, fill=orange!20, fontscale=0.05,
+    text width=2cm, text centered, minimum height=1cm]
+    \tikzstyle{noneblock} = [rectangle,fontscale=0.05,
+    text width=10cm, rounded corners,align=left, minimum height=1cm]
+    \tikzstyle{fs} = [ellipse, draw, fill=orange!20,  fontscale=0.25,
+    text width=2cm, text centered, rounded corners, minimum height=3em]
+    \tikzstyle{longblock} = [rectangle, draw, fill=purple!20,  fontscale=0.25,
+    text width=4cm, text centered, minimum height=3em]
+\tikzstyle{line} = [draw, -latex', very thick, fontscale=0.25,]
+\tikzstyle{async} = [draw, -latex', thick, gray, dashed, text =black, fontscale=0.25,]
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,  fontscale=0.25,
+    minimum height=2em]  
+    \tikzset{fontscale/.style = {font=\relsize{#1}} }
+    \usetkzobj{all}
+
+
+
+
+\newganttchartelement*{mymilestone}{
+mymilestone/.style={
+shape=isosceles triangle,
+inner sep=0pt,
+draw=cyan,
+top color=white,
+bottom color=cyan!50
+},
+mymilestone incomplete/.style={
+/pgfgantt/mymilestone,
+draw=yellow,
+bottom color=yellow!50
+},
+mymilestone label font=\slshape,
+mymilestone left shift=0pt,
+mymilestone right shift=0pt
+}
+
+\newgantttimeslotformat{stardate}{%
+\def\decomposestardate##1.##2\relax{%
+\def\stardateyear{##1}\def\stardateday{##2}%
+}%
+\decomposestardate#1\relax%
+\pgfcalendardatetojulian{\stardateyear-01-01}{#2}%
+\advance#2 by-1\relax%
+\advance#2 by\stardateday\relax%
+}
+
+

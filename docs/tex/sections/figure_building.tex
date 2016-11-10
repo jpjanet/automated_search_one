@@ -1,0 +1,131 @@
+
+\begin{figure}[H]
+    \begin{footnotesize} 
+\begin{tikzpicture}[node distance =  2.15cm,auto,scale = 0.7]
+    % Place nodes
+ \node [longblock] (ljd) at (0,0) {live\_job\_dictionary \\
+ \begin{flalign*}
+\text{key}&: \textrm{JOB\_INFILE\_PATH} \\
+\textit{val}&: \textrm{QUEUE\_ID} 
+ 						 \end{flalign*}};
+ \node [longblock] (ljd) at (8,0) {submitted\_job\_dictionary \\
+ \begin{flalign*}
+\text{key}&: \textrm{JOB\_INFILE\_PATH} \\
+\textit{val}&: \textrm{NUM\_OF\_SUBMITS} 
+ 						 \end{flalign*}}; 						 
+\node [longblock] (ljd) at (16,0) {converged\_job\_dictionary \\
+ \begin{flalign*}
+\text{key}&: \textrm{JOB\_INFILE\_PATH} \\
+\textit{val}&: \textrm{CONVERGED\_FLAG} 
+ 						 \end{flalign*}};
+%\node [block] (GA) {GA main \\ p rogram };
+%\node [block, right of = GA] (molsimplify) {molSimplify};
+%\node [block, right of = molsimplify] (job_dispatcher) {job \\ dispatcher};
+%\node [block, right of = job_dispatcher] (SGE) {SGE \\ Engine};
+%    \node [below of = GA] (ph1) {};
+%\node [below of = SGE] (ph2) {};
+%\node [block, below of = ph1] (wake) {wake up \\ script};
+%\node [decision, right of = wake] (monitor) {monitor};
+%\node [longblock, above of =  monitor] (state) {state space \\ file};
+%\node [fs, below of = ph2] (filesystem) {resources};
+%%\draw[draw = none,fill=gray!30!red!70, fill opacity=0.2]  ($(GA.north west)+(-0.5,0.15)$) rectangle ($(state.south east)+(2,-0.5)$)};
+%\node [above of = GA, node distance =  0cm,fontscale=0.25,label={[label distance=0.75cm,text = gray!30!red!70]90:{dormant}}] (dorm) {};
+%\path[line] (GA) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{L choice}}] {} (molsimplify);
+%\path[line] (molsimplify) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{geometry}}] {} (job_dispatcher);
+%\path[line] (job_dispatcher) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{job}}] {} (SGE);
+%\path[line] ([yshift = - 0.25cm]state.west) -| node[near start,text width=1cm,text centered] {read state} ([xshift = -0.5cm]GA.south);
+%\path[line] ([xshift = 0.5cm]GA.south) |- node[near start,text width=1cm,text centered] {write state} ([yshift =0.25cm]state.west);
+%\path[line] (job_dispatcher.south) |- node[near start,right,text width=1cm,text centered,fontscale=0.25] {job history} (state.east);
+%\path[line] (wake.west) -| ([xshift=-0.5 cm,yshift=-0.25cm]GA.west) -- node[above] {} ([yshift= -0.25cm]GA.west);
+%\path[line] (filesystem.west) -- node[below,fontscale=0.25,label={[label distance=-1.5cm,text width=1cm]90:{inspect output}}] {} (monitor.east);
+%\path[line] (state.south) -- node[right,text width=1.5cm,text centered,fontscale=0.25] {inspect job history} (monitor.north);
+%\path[line] (monitor.west) -- node[above] {} (wake.east);
+%\path[line] ([yshift = -1cm, xshift= -2cm]wake.south west) -| node[near start,above left,fontscale=0.25] {system time} (monitor.south);
+%\path[async] ([xshift=-0.5 cm]SGE.south) -- node[right,text width=2cm,text centered] {} ([xshift=-0.5 cm]filesystem.north);
+%\path[async] ([xshift=0 cm]SGE.south) -- node[left] {} ([xshift=-0 cm]filesystem.north);
+%\path[async] ([xshift=0.5 cm]SGE.south) -- node[right,text width=2.5cm,text centered,fontscale=0.1,,fontscale=0.25,label={[label distance=-0.5cm,text width=2cm]90:{asynchronous, distributed execution}}] {} ([xshift=0.5 cm]filesystem.north);
+%\path[line,blue, dashed] ([xshift = -2cm, yshift = 0.25cm]GA.west) -- node[above,above,fontscale=0.25,label={[label distance=0.12cm]90:{initalization}}] {} ([xshift = 0cm, yshift = 0.25cm]GA.west);
+\end{tikzpicture}
+\end{footnotesize}
+\end{figure}
+
+
+
+
+
+
+\newpage{}
+
+
+%\begin{figure}[H]
+%\begin{tikzpicture}[node distance =  2.75cm,auto,fontscale=0.01]
+%\linespread{1}
+%\node [strategy] (MFO) at (-3.5,0) {MFO \\ methods};
+%\node [strategy] (adapt) at (-1,1.5) {adpation};
+%\node [strategy] (fus) at (-1,-1.5) {fusion};
+%\node [strategy] (cor) at (2,2.5) {add/multi.\\ correciton};
+%\node [strategy, text width=2cm] (repar) at (2,0.75) {reparameter-ization};
+%\node [strategy] (koc) at (2,-1.5) {co-kriging};
+%\node [noneblock] (corex) at (8.5,2.5) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq f_{LF}\left(c_i\right) + \xi \left(\mathbf{x}_i \vert \mathbf{x}_j,f(c_j), \forall j<i \right)\label{Eq:clo_sur}&\end{flalign}}};
+%\node [noneblock] (corex) at (8.5,0.75) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq f_{LF}\left(c_i, \xi \left(\mathbf{x}_i \vert \mathbf{x}_j,f(c_j), \forall j<i \right) \right)\label{Eq:orp_sur}&\end{flalign}}};
+%\node [noneblock,align=left] (corex) at (8.5,-1.5) {\parbox{8cm}{\begin{flalign} \tilde{f}\left(c_i\right) &\defeq  \xi \left(\mathbf{x}_n,f_{LF}(c_n),\mathbf{x}_m,f(c_m)\right)\label{Eq:orp_sur}&\end{flalign}}};
+%\path [line] (MFO.north) |- (adapt.west);
+%\path [line] (MFO.south) |- (fus.west);
+%\path [line] (adapt.north) |- (cor.west);
+%\path [line] (adapt.south) |- (repar.west);
+%\path [line] (fus.east) |- (koc.west);
+%\end{tikzpicture}
+%
+%\caption{Schematic of classification of multifidelty surrogate ($\tilde{f}$) construction methods as proposed in Aim 2. In each case $\mathbf{x}$ are elements in the descriptor space, $c_i = T^{-1}\mathbf{x}_i$ are corresponding elements in chemical space, $f_{LE}$ is the low fidelity  semiempirical method,$f$ is the DFT objective, $\xi$ is the data-driven function (NN or GP). A single, purely data-driven surrogate (e.g. using the NN to optimize) is given by Equation (\ref{Eq:clo_sur}) with $f_{LF}\equiv0$. }
+%\end{figure}
+%
+%
+%
+%\begin{figure}[H]
+%\begin{tikzpicture}
+%\node (A) at (3.45,3.75) {{\chemfig[][scale=1]{{\color{darkgreen}L_{1}}>[:30]{\color{orange}M}(-[90,,,,thick]{{\color{blue}L_{2}}})(-[:-90,,,,thick]{{\color{green}L_{3}}})
+%(<:[:150]{\color{darkgreen}{L_{1}}})
+%(<[:-30]{\color{darkgreen}{L_{1}}})
+%<:[:30]{\color{darkgreen}{L_{1}}}}}};
+%\node (ps) at (13,0){};
+%\node (psy) at (13,4){};
+%\path[line,very thick] (psy) -- (ps.center);
+%\node[circle, fill=black,minimum width =0.05cm,label=below:{$\mathbf{x}_i$}] (x) at (8.2,2.8) {};
+%\node[circle, fill=black,minimum width =0.05cm,label=left:{$\mathbf{x}_{i+1}$}] (x2) at (6.3,2.6) {};
+%\node[circle, fill=black,minimum width =0.05cm,label=right:{$\mathbf{x}_{j}$}] (x3) at (5.5,0.75) {};
+%\node[circle, fill=red,minimum width =0.05cm,label=right:{$\mathbf{y}_{i}$}] (y) at (13,3) {};
+%\node[circle, fill=blue,minimum width =0.05cm,label=right:{$\mathbf{y}_{i+1}$}] (y2) at (13,2) {};
+%\node[circle, fill=darkgreen,minimum width =0.05cm,label=right:{$\mathbf{y}_{j}$}] (y3) at (13,0.75) {};
+%\path[draw, thick,->,red] (A) edge[bend left] node[below] {$T(c_i)$} (x);
+%\path[draw, thick,->] (x) edge[bend left] node[below] {$\tilde{f}(c_i)$} (y);
+%%% path iin DS
+%\path[draw,dashed,gray,thick,->] (x) -- (x2);
+%\path[draw,dashed,gray,thick,->] (x2) -- (x3);
+%\node (ds) at (5,0){};
+%\node (dsy) at (5,4){};
+%\node (dsx) at (9,0){};
+%\path[line,very thick] (ds.center) -- (dsx);
+%\path[line,very thick] (ds.center) -- (dsy);
+%\node (lab1) at (7,-1){\textbf{Desciptor Space $X\subset \mathbb{R}^{d}$}};
+%\node (lab1) at (13,-1){\textbf{Estimated Objective $\mathbb{R}$}};
+%\node (lab1) at (1,-1){\textbf{Chemical Space $C_f$}};
+%\node (is2) at (12,2){};
+%\node (is1) at (9,2){};
+%\node (is3) at (9,1){};
+%\node (is4) at (12,1){};
+%\path[draw, thick,->] (is1) edge[bend left] node[below] {} (is2);
+%\path[draw, thick,->] (is4) edge[bend left] node[below] {} (is3);
+%\node (lab3) at (10.5,1.5){ $\min \tilde{f}$ on $X$};
+%\foreach \x in {0,1,2}
+%		\foreach \y in {1,2,3}{
+%		\node[rectangle,fill=teal,minimum width = 0.05cm] (place\x\y) at (\x,\y){};}
+%\node[draw,circle,very thick,red,minimum width = 0.5cm,label=right:{\color{red}$c_i$}] (ci) at (1,3){};
+%\node[draw,circle,very thick,blue,minimum width = 0.5cm,label=right:{\color{blue}$c_j$}] (cj) at (2,1){};
+%\node[draw,circle,very thick,red,minimum width = 2.75cm] (cic) at (3.45,3.75){};
+%\path[draw,red,dashed,very thick] (ci.north) edge node[below] {} (cic.north west);
+%\path[draw,red,dashed,very thick] (ci.south) edge node[below] {} (cic.south);
+%\path[draw, thick,->,blue] (x3) edge[bend left] node[above] {$T^{-1}(x_{j})$} (cj);
+%\end{tikzpicture}
+%
+%\caption{General surrogate model scheme for optimization, showing how to select a new point in design space $c_j$ from existing point $c_i$, by projection,$T$, into the descriptor space $X$, optimization using $\tilde{f}$, and then reconstruction, $T^{-1}\mathbf{x}_j$ . $\tilde{f}$ is a surrogate model parameterized on knowledge of the expensive objective at previous points including $c_i$. \label{Fig:surro}}
+%\end{figure}
