@@ -9,15 +9,17 @@ import string
 import numpy
 import pybel
 from prep_calc import *
-#from geometry import *
-#from atom3D import *
-#from globalvars import globalvars
-#from mol3D import*
+from geometry import *
+from atom3D import *
+from globalvars import globalvars
+from mol3D import*
 
 
 
 ########### UNIT CONVERSION
-HF_to_Kcal_mol = 627.503
+HF_to_Kcal_mol = 627.509###
+###########################
+
 def maximum_ML_dist(mol):
     core = mol.getAtom(mol.findMetal()).coords()
     max_dist = 0
@@ -46,64 +48,73 @@ class DFTRun:
         self.name = name
         self.outpath  = 'undef'
         self.geopath = 'undef'
+        self.init_geopath = 'undef'
+        self.progpath  = 'undef'
         self.geo_exists = False
         self.output_exists = False
         self.converged = 'N'
         self.time = 'undef'
         self.energy = 0
         self.spin = 'undef'
-        self.eqlig_charge = 'undef'
-        self.ssq = 0
-        self.star = 0
-        self.gene = 'undef'
-    def obtain_mol3d(self,geopath):
+        self.eqlig_ind = 'undef'
+        self.axlig1_ind = 'undef'
+        self.axlig2_ind = 'undef'
+        self.eqlig = 'undef'
+        self.axlig = 'undef'
+        self.axlig = 'undef'
+
+        self.ss_target = 0
+        self.ss_act = 0
+    def obtain_mol3d(self):
         this_mol = mol3D()
-        this_mol.readfromxyz(geopath + self.name + '.xyz')
+        if os.path.exists(self.geopath):
+                this_mol.readfromxyz(self.geopath)
+        elif  os.path.exists(self.progpath):
+                this_mol.readfromxyz(self.progpath)
         self.mol = this_mol
+        init_mol = mol3D()
+        init_mol.readfromxyz(self.init_geopath)
+        self.init_mol = init_mol
+    def extract_prog(self):
+            cmd_str = 'python optgeo_extract.py '+ self.scrpath + ' ' + self.progpath
+            print(cmd_str)
+            subprocess.call(cmd_str,shell=True)
+    def extract_geo(self):
+            cmd_str = 'python optgeo_extract.py '+ self.scrpath + ' ' + self.optgeopath
+            print(cmd_str)
+            subprocess.call(cmd_str,shell=True)
+
     def obtain_ML_dists(self):
         self.min_dist = minimum_ML_dist(self.mol)
         self.max_dist = maximum_ML_dist(self.mol)
-    def configure_ligands(self):
-        this_ax_lig = liganddict[self.axlig]
-        this_eq_lig = liganddict[self.eqlig]
-        self.axlig_dent = this_ax_lig[0]
-        self.eqlig_dent = this_eq_lig[0]
-        self.axlig_charge = this_ax_lig[1]
-        self.eqlig_charge = this_eq_lig[1]
-        self.axlig_connect = this_ax_lig[2]
-        self.eqlig_connect = this_eq_lig[2]
-        self.axlig_natoms = this_ax_lig[3]
-        self.eqlig_natoms = this_eq_lig[3]
-        self.axlig_mdelen =  this_ax_lig[4]
-        self.eqlig_mdelen = this_eq_lig[4]
-#        print(this_ax_lig)
+    def configure(self,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat):
+        self.metal = metal
+        self.ox = ox
+        self.spin = spin
+        self.eqlig_ind = eqlig
+        self.axlig_ind = axlig2
+        self.ax2lig_ind = axlig1
+        ligands_dict = get_ligands()
+        self.eqlig = get_ligands[self.eqlig_ind][0]
+        self.axlig1 = get_ligands[self.axlig1_ind][0]
+        self.axlig2 = get_ligands[self.axlig2_ind][0]
+
 class Comp:
     """ This is a class for each unique composition and configuration"""
     def __init__(self,name):
         self.name = name
         self.ox =' undef'
         self.metal= 'undef'
-        self.axlig = 'undef'
+        self.axlig1 = 'undef'
+        self.axlig2 = 'undef'
         self.eqlig = 'undef'
+        self.axlig1_ind = 'undef'
+        self.axlig2_ind = 'undef'
+        self.eqlig_ind = 'undef'
         self.alpha = 'undef'
         self.HSenergy = 'undef'
         self.LSenergy= 'undef'
-        self.runnumbers  = list()
         self.times = list()
-        self.axlig_connect = 'undef'
-        self.eqlig_connect = 'undef'
-        self.axlig_natoms = 'undef'
-        self.eqlig_natoms = 'undef'
-        self.axlig_dent = 'undef'
-        self.eqlig_dent = 'undef'
-        self.axlig_mdelen = 'undef'
-        self.eqlig_mdelen = 'undef'
-        self.axlig_charge = 'undef'
-        self.eqlig_charge = 'undef'
-        self.hs_max_dist = 'undef'
-        self.hs_min_dist = 'undef'
-        self.ls_max_dist = 'undef'
-        self.ls_min_dist = 'undef'
         self.splitenergy = 0
 
     def process(self):
@@ -116,13 +127,6 @@ class Comp:
         self.fitness = numpy.exp(en)
 
 def writeprops(extrct_props,startpoints,newfile,do_strip):
-#    for word in xrange(0,len(extrct_props)):
- #       if do_strip == 0:
- #           wbuffer=str(extrct_props[word]).strip()
- #       else:
- #           wbuffer=str(extrct_props[word])
- #       wbuffer=wbuffer.ljust(startpoints[word + 1])
-#        print(wbuffer)
     string_to_write = ','.join([str(word) for word in extrct_props ])
     newfile.write(string_to_write)
     newfile.write("\n")
@@ -136,22 +140,27 @@ def scfextract(a_run,list_of_props):
 def test_terachem_go_convergence(job):
     ### get paths
     path_dictionary = setup_paths()
-    gen,slot,gene,spin,base_name = translate_job_name(job)
+    ID,low_name,base_name,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat,gene = translate_job_name(job)
     ### flag
     converged =  False
+    geo_exists = False
+    this_run.converged = False
     ### test if geo exits
     this_run=DFTRun(base_name)
-    this_run.geopath = (path_dictionary["optimial_geo_path" ] + "/gen_" + str(gen) +"/"
-                           + base_name + ".xyz")
-    this_run.outpath = (path_dictionary["out_path" ] + "/gen_" + str(gen) +"/"
-                           + base_name + ".out")
-    this_run.spin = spin
-    this_run.gene =  gene
+    this_run.geopath = (path_dictionary["optimial_geo_path" ] + base_name + ".xyz")
+    this_run.geopath = (path_dictionary["progress_geo_path" ] + base_name + ".xyz")
+    this_run.outpath = (path_dictionary["geo_out_path" ] + base_name + ".out")
+    this_run.scrpath = (basic_path + 'scr/geo/' + base_name +"/optim.xyz")
+    this_run.configure(self,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
+    this_run.gene = gene
+    this_run.ID = ID
+    this_run.spin_cat = spin_cat
+    print('run is set up')
     if os.path.exists(this_run.geopath):
         this_run.geo_exists = True
     if os.path.exists(this_run.outpath):
-        ### file is found,d check if converged
-        with open(this_run.outpath) as f: 
+        ### file is found, check if converged
+        with open(this_run.outpath) as f:
             data=f.readlines()
             found_conv =False 
             found_data =False
@@ -160,7 +169,8 @@ def test_terachem_go_convergence(job):
                 if str(lines).find('Converged!') != -1:
                     found_conv = True
                 if str(lines).find('Optimization Converged.') != -1:
-                    found_conv = True
+                   found_conv = True
+                   print(lines)
                 if str(lines).find('FINAL ENERGY') != -1:
                     this_run.energy =str(lines.split()[2])
                     found_data = True
@@ -169,34 +179,61 @@ def test_terachem_go_convergence(job):
                     found_time = True
                 if str(lines).find('SPIN S-SQUARED') != -1:
                     this_str=(lines.split())
-                    this_run.ssq =float( this_str[2])
-                    this_run.star = float(this_str[4].strip('()'))
+                    this_run.ss_act =float( this_str[2])
+                    this_run.ss_target = float(this_str[4].strip('()'))
         if (found_data == True) and (found_time == True) and (found_conv == True):
             this_run.converged = True
-        try:
-            this_run.obtain_mol3d(this_mol.geopath)
-            this_run.obtain_ML_dists()
-        except: 
-            this_run.min_dist = 0
-            this_run.max_dist = 0
+            print('found all')
+        if this_run.converged:
+                print('run converged')
+                if this_run.geo_exists:
+                        print('geo exists for ' + this_run.name)
+                if not this_run.geo_exists:
+                        try:
+                                this_run.extract_geo()
+                        except:
+                                print("ERROR: scr not found for" + str(this_run.geopath))
+                if os.path.exists(this_run.geopath):
+                        if os.path.exists(this_run.init_geopath):
+                                print('both paths exist')
+                                this_run.obtain_mol3d()
+                                try:
+                                        this_run.obtain_rmsd()
+                                except:
+                                        this_run.rmsd = "undef"
         if not this_run.converged:
-                print(' job  ' + str(this_run.outpath) + 'not converged')
-                logger(path_dictionary['state_path'],str(datetime.datetime.now()) + ' unconverged run:  ' + str(this_run.outpath)) 
+                print(' \n job  ' + str(this_run.outpath) + ' not converged\n')
+                try:
+                        this_run.extract_prog()
+                        this_run.obtain_mol3d()
+                        try:
+                            this_run.obtain_rmsd()
+                        except:
+                            this_run.rmsd = "undef"
 
+                except:
+                        print("ERROR: scr not found for" + str(this_run.progpath))
+    print('run is returned')
     return this_run
 def test_terachem_sp_convergence(job):
     ### get paths
     path_dictionary = setup_paths()
-    gen,slot,gene,spin,base_name = translate_job_name(job)
+    ## get job properties
+    base_name = os.path.basename(jobs)
+    base_name = base_name.strip('.in')
+    ID,low_name,base_name,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat,gene = translate_job_name(job)
+
     ### flag
     converged =  False
     ### test if geo exits
     this_run=DFTRun(base_name)
-    this_run.outpath = (path_dictionary["out_path" ] + "/gen_" + str(gen) +"/"
-                           + base_name + ".out")
+    this_run.outpath = (path_dictionary["vertical_out_path" ]  + base_name + ".out")
     print("checking ",this_run.outpath)
-    this_run.spin = spin
-    this_run.gene =  gene
+    this_run.configure(self,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
+    this_run.gene = gene
+    this_run.ID = ID
+    this_run.spin_cat = spin_cat
+
     if os.path.exists(this_run.outpath):
         ### file is found,d check if converged
         with open(this_run.outpath) as f: 
@@ -215,70 +252,86 @@ def test_terachem_sp_convergence(job):
                     found_time = True
                 if str(lines).find('SPIN S-SQUARED') != -1:
                     this_str=(lines.split())
-                    this_run.ssq =float( this_str[2])
-                    this_run.star = float(this_str[4].strip('()'))
+                    this_run.ss_act =float( this_str[2])
+                    this_run.ss_target = float(this_str[4].strip('()'))
         if (found_data == True) and (found_time == True) and (found_conv == True):
             this_run.converged = True
     return this_run
 
-
-def process_runs(all_runs):
+def process_runs_sp(LS_runs,HS_runs):
     final_results=dict()
     matched = False
-    unproc_runs = all_runs
     number_of_matches  = 0
     print('processing all converged runs')
-    for run_names in unproc_runs.keys():
+    for ID in LS_runs.keys():
         matched = 0 
-        main_run = unproc_runs[run_names]
-        this_name = main_run.name 
-        this_gene = main_run.gene
-        main_spin = main_run.spin
-        if main_run.spin == 2 :
-            partner_spin = 6
-        else:
-            partner_spin = 2
-        partner_name = main_run.name[:-1] + str(partner_spin)
-        name = this_gene
-        print("\n")
-        print(type(main_run.spin))
-        print("main name    :",main_run.name)
-        print("partner name :", partner_name)
-        if partner_name in unproc_runs.keys():
-            partner = unproc_runs[partner_name] 
+        LS_run = LS_runs[ID]
+        this_name = LS_run.name
+        this_ID = ID
+        if ID in HS_runs.keys():
+            HS_run = HS_runs[ID]
             matched = True
             number_of_matches += 1
-            if not partner.gene == main_run.gene:
-                print("genes don't match across spins")
-            if main_spin > partner_spin:
-                HSpartner = main_run
-                LSpartner = partner
-            else:
-                HSpartner = partner
-                LSpartner = main_run
-                print('matched',matched)
-                print('LSC',LSpartner.converged)
-                print('HSC',HSpartner.converged)
-                print('matched',LSpartner.energy)
-                print('matched',HSpartner.energy)
-
-        if ((matched) and (LSpartner.converged == True) and (HSpartner.converged == True)  and (LSpartner.energy != 0) and (HSpartner.energy != 0)):
-            final_results[name] = Comp(this_gene)
-            final_results[name].HSenergy = HSpartner.energy
-            final_results[name].LSenergy = LSpartner.energy
-            LS_ss_error = abs(LSpartner.star - LSpartner.ssq)
-            HS_ss_error = abs(HSpartner.star - HSpartner.ssq)
-            try:
-                final_results[name].process()
-            except:
-                final_results[name].splitenergy = 0
-            if (LS_ss_error >= HS_ss_error):
-                final_results[name].star = LSpartner.star
-                final_results[name].ssq = LSpartner.ssq
-            else:
-                final_results[name].star = HSpartner.star
-                final_results[name].star = HSpartner.ssq
-            final_results[name].find_fitness()
-            print('final_results',final_results[name].fitness)
+        if matched:
+            print('matched ID: '+ str( ID) + ' files ' + str(HS_run.name) + ' and ' + str(LS_run.name))
+            final_results[this_ID] = Comp(this_ID)
+            final_results[this_ID].ID = this_ID
+            final_results[this_ID].LSenergy = str(float(LS_run.energy))
+            final_results[this_ID].HSenergy = str(float(HS_run.energy))
+            final_results[this_ID].process()
+            final_results[this_ID].eqlig_ind = LS_run.eqlig_ind
+            final_results[this_ID].axlig1_ind = LS_run.axlig1_ind
+            final_results[this_ID].axlig2_ind = LS_run.axlig2_ind
+            final_results[this_ID].eqlig_ind = LS_run.eqlig
+            final_results[this_ID].axlig1_ind = LS_run.axlig1
+            final_results[this_ID].axlig2_ind = LS_run.axlig2
+            final_results[this_ID].HSss_act = HS_run.ss_act
+            final_results[this_ID].LSss_act = LS_run.ss_act
+            final_results[this_ID].LSss_target = LS_run.ss_target
+            final_results[this_ID].HSss_target = HS_run.ss_target
+        else:
+            print('unmatched ID: '+ str( ID) + ' files ' + str(LS_run.name)+ ' has no partner' )
     return final_results
+
+def process_runs_geo(LS_runs,HS_runs):
+    final_results=dict()
+    matched = False
+    number_of_matches  = 0
+    print('processing all converged runs')
+    for ID in LS_runs.keys():
+        matched = 0 
+        LS_run = LS_runs[ID]
+        this_name = LS_run.name
+        this_ID = ID
+        if ID in HS_runs.keys():
+            HS_run = HS_runs[ID]
+            matched = True
+            number_of_matches += 1
+        if matched:
+            print('matched ID: '+ str( ID) + ' files ' + str(HS_run.name) + ' and ' + str(LS_run.name))
+            final_results[this_ID] = Comp(this_ID)
+            final_results[this_ID].ID = this_ID
+            final_results[this_ID].LSenergy = str(float(LS_run.energy))
+            final_results[this_ID].HSenergy = str(float(HS_run.energy))
+            final_results[this_ID].process()
+            final_results[this_ID].eqlig_ind = LS_run.eqlig_ind
+            final_results[this_ID].axlig1_ind = LS_run.axlig1_ind
+            final_results[this_ID].axlig2_ind = LS_run.axlig2_ind
+            final_results[this_ID].eqlig_ind = LS_run.eqlig
+            final_results[this_ID].axlig1_ind = LS_run.axlig1
+            final_results[this_ID].axlig2_ind = LS_run.axlig2
+            final_results[this_ID].HSss_act = HS_run.ss_act
+            final_results[this_ID].LSss_act = LS_run.ss_act
+            final_results[this_ID].LSss_target = LS_run.ss_target
+            final_results[this_ID].HSss_target = HS_run.ss_target
+            final_results[this_ID].LS_rmsd = LS_run.rmsd
+            final_results[this_ID].HS_rmsd = HS_run.rmsd
+        else:
+            print('unmatched ID: '+ str( ID) + ' files ' + str(LS_run.name)+ ' has no partner' )
+    return final_results
+
+
+
+
+
 

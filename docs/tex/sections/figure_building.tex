@@ -8,16 +8,54 @@
 \text{key}&: \textrm{JOB\_INFILE\_PATH} \\
 \textit{val}&: \textrm{QUEUE\_ID} 
  						 \end{flalign*}};
- \node [longblock] (ljd) at (8,0) {submitted\_job\_dictionary \\
+ \node [longblock] (sjd) at (8,0) {submitted\_job\_dictionary \\
  \begin{flalign*}
 \text{key}&: \textrm{JOB\_INFILE\_PATH} \\
 \textit{val}&: \textrm{NUM\_OF\_SUBMITS} 
  						 \end{flalign*}}; 						 
-\node [longblock] (ljd) at (16,0) {converged\_job\_dictionary \\
+ \node [glongvblock] (gjd) at (0,6) {ID\_for\_dispatch \\
+ \begin{flalign*}
+\textit{val}&: \textrm{ID} 
+ 						 \end{flalign*}}; 	 						 
+\node [longblock] (cjd) at (16,0) {converged\_job\_dictionary \\
  \begin{flalign*}
 \text{key}&: \textrm{JOB\_INFILE\_PATH} \\
 \textit{val}&: \textrm{CONVERGED\_FLAG} 
- 						 \end{flalign*}};
+ \end{flalign*}};
+\node [glongblock] (req) at (8,6) {outstanding\_job\_list \\
+ \begin{flalign*}
+\textit{val}&: \color{black}&:\textrm{JOB\_INFILE\_PATH} 
+\end{flalign*}}; 
+\node [glongblock] (ccd) at (16,12) {complex\_converge\_dictionary \\
+ \begin{flalign*}
+\text{key}&: {\textrm{GENE}}\color{black} \\
+\textit{val}&: \color{black}\textrm{CONVERGED\_FLAG} 
+\end{flalign*}}; 
+\node [glongvblock] (ucd) at (12,18) {unique\_complex\_dictionary \\
+ \begin{flalign*}
+\text{key}&: {\textrm{GENE}}\color{black} \\
+\textit{val}&: \color{black}\textrm{COMPLEX\_CLASS} 
+\end{flalign*}}; 
+\node [glongblock] (ucd) at (4,18) {gene\_id\_dictionary \\
+ \begin{flalign*}
+\text{key}&: {\textrm{ID}}\color{black} \\
+\textit{val}&: \color{black}\textrm{GENE} 
+\end{flalign*}}; 
+\node [blongblock] (controller) at (8,12) {optimization \\ monitor};	
+\node [blongblock] (csr) at (0,10) {complex selection routine};	
+\node [blongblock] (fev) at (16,6) {fitness evaluation};
+\path[line] (csr.east) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{job\_dispatcher}}] {} (req);
+\path[line] (req.east) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{fitness\_inspect}}] {} (fev);			
+\path[line] (cjd.north) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{fitness\_inspect}}] {} (fev);	
+\path[line] (req.south) -- node[right,fontscale=0.25,label={[label distance=0cm]{submit\_outstanding}}] {} (sjd);	 
+\path[line,red] (req.south) -| ([xshift=0cm,yshift=-0.5cm]req.south) -| node[right,fontscale=0.25,label={[label distance=0cm]{submit\_outstanding}}] {} (ljd.north);	
+\node [olongblock] (monitor) at (8,-6) {CRON};	
+\path[line] (monitor.east) -| node[right,fontscale=0.25,label={[label distance=0cm]{check\_convergance}}] {} (cjd.south);
+\path[line] (monitor.west) -| node[right,fontscale=0.25,label={[label distance=0cm]{check\_live}}] {} (ljd.south);
+\path[line] (controller.west) -| node[right,fontscale=0.25,label={[label distance=0cm]{}}] {} (csr.north);
+\path[line] (controller.west) -| node[right,fontscale=0.25,label={[label distance=0cm]{}}] {} (csr.north);
+\path[line] (fev.north) |- node[right,fontscale=0.25,label={[label distance=0cm]{}}] {} (ccd.south);
+\path[line] (ccd.west) -- node[right,fontscale=0.25,label={[label distance=0cm]{}}] {} (controller.east);
 %\node [block] (GA) {GA main \\ p rogram };
 %\node [block, right of = GA] (molsimplify) {molSimplify};
 %\node [block, right of = molsimplify] (job_dispatcher) {job \\ dispatcher};
@@ -32,9 +70,9 @@
 %\node [above of = GA, node distance =  0cm,fontscale=0.25,label={[label distance=0.75cm,text = gray!30!red!70]90:{dormant}}] (dorm) {};
 %\path[line] (GA) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{L choice}}] {} (molsimplify);
 %\path[line] (molsimplify) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{geometry}}] {} (job_dispatcher);
-%\path[line] (job_dispatcher) -- node[above,fontscale=0.25,label={[label distance=0.25cm]90:{job}}] {} (SGE);
+
 %\path[line] ([yshift = - 0.25cm]state.west) -| node[near start,text width=1cm,text centered] {read state} ([xshift = -0.5cm]GA.south);
-%\path[line] ([xshift = 0.5cm]GA.south) |- node[near start,text width=1cm,text centered] {write state} ([yshift =0.25cm]state.west);
+
 %\path[line] (job_dispatcher.south) |- node[near start,right,text width=1cm,text centered,fontscale=0.25] {job history} (state.east);
 %\path[line] (wake.west) -| ([xshift=-0.5 cm,yshift=-0.25cm]GA.west) -- node[above] {} ([yshift= -0.25cm]GA.west);
 %\path[line] (filesystem.west) -- node[below,fontscale=0.25,label={[label distance=-1.5cm,text width=1cm]90:{inspect output}}] {} (monitor.east);

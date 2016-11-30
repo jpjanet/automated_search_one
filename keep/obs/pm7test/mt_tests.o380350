@@ -1,0 +1,31 @@
+gibraltar-07 granted 2 GPUs: 0 4
+0
+4
+Creating gibraltar-07:/scratch/jp/380350
+Changing directory to gibraltar-07:/scratch/jp/380350
+jobs/1001_Mn_2_eq_3_ax1_37_ax2_9_2.in
+gen path = jobs
+namebase = 1001_Mn_2_eq_3_ax1_37_ax2_9_2
+Begining Gibraltar geometry optimization run
+gen path = /home/jp/pm7test
+gen num = 
+namebase = 1001_Mn_2_eq_3_ax1_37_ax2_9_2
+inpath is /home/jp/pm7test/infiles/1001_Mn_2_eq_3_ax1_37_ax2_9_2.in
+Initializing local run, finding input files...
+begining
+file is  1001_Mn_2_eq_3_ax1_37_ax2_9_2
+this current home: /home/jp
+outpath is /home/jp/pm7test/outfiles/1001_Mn_2_eq_3_ax1_37_ax2_9_2.out
+/home/jp/pm7test/initial_geo/1001_Mn_2_eq_3_ax1_37_ax2_9_2.xyz
+wf from scratch
+copying from /home/jp/pm7test/jobs/1001_Mn_2_eq_3_ax1_37_ax2_9_2.in to /home/jp/pm7test/infiles/1001_Mn_2_eq_3_ax1_37_ax2_9_2.in
+inpath is /home/jp/pm7test/infiles/1001_Mn_2_eq_3_ax1_37_ax2_9_2.in
+Launching geo calc: 1001_Mn_2_eq_3_ax1_37_ax2_9_2
+we found scr: /scratch/jp/380350/scr
+TC return status = 0
+the file is 1001_Mn_2_eq_3_ax1_37_ax2_9_2 , the target is /home/jp/pm7test/completejobs/1001_Mn_2_eq_3_ax1_37_ax2_9_2.done
+removing job 1001_Mn_2_eq_3_ax1_37_ax2_9_2
+
+Complete
+/var/spool/gpu CUDA_380350
+gibraltar-07 releasing GPUs: 0 4

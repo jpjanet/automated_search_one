@@ -1,0 +1,23 @@
+gibraltar-28 granted 2 GPUs: 4 7
+4
+7
+Creating gibraltar-28:/scratch/jp/380362
+Changing directory to gibraltar-28:/scratch/jp/380362
+jobs/1007_Mn_2_eq_44_ax1_39_ax2_42_2.in
+gen path = jobs
+namebase = 1007_Mn_2_eq_44_ax1_39_ax2_42_2
+Begining Gibraltar geometry optimization run
+gen path = /home/jp/pm7test
+gen num = 
+namebase = 1007_Mn_2_eq_44_ax1_39_ax2_42_2
+inpath is /home/jp/pm7test/infiles/1007_Mn_2_eq_44_ax1_39_ax2_42_2.in
+Initializing local run, finding input files...
+begining
+file is  1007_Mn_2_eq_44_ax1_39_ax2_42_2
+this current home: /home/jp
+outpath is /home/jp/pm7test/outfiles/1007_Mn_2_eq_44_ax1_39_ax2_42_2.out
+/home/jp/pm7test/initial_geo/1007_Mn_2_eq_44_ax1_39_ax2_42_2.xyz
+wf from scratch
+copying from /home/jp/pm7test/jobs/1007_Mn_2_eq_44_ax1_39_ax2_42_2.in to /home/jp/pm7test/infiles/1007_Mn_2_eq_44_ax1_39_ax2_42_2.in
+inpath is /home/jp/pm7test/infiles/1007_Mn_2_eq_44_ax1_39_ax2_42_2.in
+Launching geo calc: 1007_Mn_2_eq_44_ax1_39_ax2_42_2

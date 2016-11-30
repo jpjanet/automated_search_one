@@ -1,0 +1,23 @@
+gibraltar-22 granted 2 GPUs: 5 6
+5
+6
+Creating gibraltar-22:/scratch/jp/380354
+Changing directory to gibraltar-22:/scratch/jp/380354
+jobs/1003_Mn_3_eq_5_ax1_14_ax2_42_3.in
+gen path = jobs
+namebase = 1003_Mn_3_eq_5_ax1_14_ax2_42_3
+Begining Gibraltar geometry optimization run
+gen path = /home/jp/pm7test
+gen num = 
+namebase = 1003_Mn_3_eq_5_ax1_14_ax2_42_3
+inpath is /home/jp/pm7test/infiles/1003_Mn_3_eq_5_ax1_14_ax2_42_3.in
+Initializing local run, finding input files...
+begining
+file is  1003_Mn_3_eq_5_ax1_14_ax2_42_3
+this current home: /home/jp
+outpath is /home/jp/pm7test/outfiles/1003_Mn_3_eq_5_ax1_14_ax2_42_3.out
+/home/jp/pm7test/initial_geo/1003_Mn_3_eq_5_ax1_14_ax2_42_3.xyz
+wf from scratch
+copying from /home/jp/pm7test/jobs/1003_Mn_3_eq_5_ax1_14_ax2_42_3.in to /home/jp/pm7test/infiles/1003_Mn_3_eq_5_ax1_14_ax2_42_3.in
+inpath is /home/jp/pm7test/infiles/1003_Mn_3_eq_5_ax1_14_ax2_42_3.in
+Launching geo calc: 1003_Mn_3_eq_5_ax1_14_ax2_42_3

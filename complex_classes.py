@@ -10,22 +10,6 @@ import shutil
 
 from prep_calc import * 
 
-#ligands_dict =[['thiocyanate',[1,'SCN','S',-1]],
-#               ['chloride',[1,'Cl','Cl',-1]],
-#               ['water',[1,'H2O','O',0]],
-#               ['isothiocyanate',[1,'NCS','N',-1]],
-#               ['ammonia',[1,'NH3','N',0]],
- #              ['cyanide',[1,'CN','C',-1]],
- #              ['carbonyl',[1,'CO','C',0]],
- #              ['misc',[1,'C2H3N','S',0]],
-  #             ['pisc',[1,'pisc','C',0]],
-  #             ['bipy',[2,'bipy','N',0]],
-  #             ['phen',[2,'phen','N',0]],
-  #             ['ox',[2,'ox','O',-2]],
-  #             ['acac',[2,'acac','O',0]],
-  #            ['en',[2,'en','O',0]],
-  #             ['tbuc',[2,'tbuc','O',-2]],
-  #             ['porphyrin',[4,'porphyrin','N',-2]]]
 class TM_complex:
     def __init__(self,ID,core,oxidation_state):
         self.free_sites = [1,2,3,4,5,6]
@@ -54,13 +38,13 @@ class TM_complex:
         else:
             self.geo = 'oct'
     def check_self_loud(self):
-        print('checking in ' + str(self.ax_inds)  )
+#        print('checking in ' + str(self.ax_inds)  )
         if 0 in self.ax_inds:
             self.geo ='spy'
             print('spy')
         else:
             self.geo = 'oct'
-            print('oct')
+  #          print('oct')
 
 
     def _name_self(self):
@@ -177,7 +161,7 @@ class TM_complex:
         n = len(self.ligands_dict)
         if 0 in new_ax_ind:
             self.geo ="spy"
-        print('new_ax_ind:'+ str(new_ax_ind))
+        #print('new_ax_ind:'+ str(new_ax_ind))
         self.three_bidentate =  False
         for i,indices in enumerate(new_ax_ind):
             #print('trying to add ',indices )
@@ -226,12 +210,11 @@ class TM_complex:
             ligs =[self.ligands_dict[j][0] for j in self.ax_inds]
             #print(ligs)
         self._name_self()
-        print('final_ax_ind:'+ str(self.ax_inds))
+        #print('final_ax_ind:'+ str(self.ax_inds))
 
     def exchange_ligands(self,partner,eq_swap):
         child = octahedral_complex(self.ligands_dict)
         child.copy(self) # copies this parent
-        print("\n")
         print("swapping from",partner.name," to ",self.name)
         self.examine()
         if eq_swap:
@@ -367,13 +350,13 @@ class TM_complex:
         if not (geo_exists and in_exists):
                 print('generating '+mol_name,self.eq_ligands,self.ax_ligands)
                 with open(ms_dump_path,'a') as ms_pipe:
-                    print('writing to output to pipe' + ms_dump_path)
+        #            print('writing to output to pipe' + ms_dump_path)
                     call = [molsimpath + '/main.py','-core ' + self.core,'-lig ' +liglist,
                              '-rundir ' + rundirpath +'\n','-jobdir temp','-keepHs yes,yes,yes,yes,yes,yes',
                              '-coord '+str(cord),'-ligalign 1','-ligloc ' + str(ligloc),'-calccharge yes','-name ' +mol_name + '\n',
                              '-geometry ' + geometry,'-spin ' + str(spin),'-oxstate '+ ox_string,
                              '-qccode TeraChem','-runtyp minimize','-method UDFT','-mopac']
-                    print(call)
+        #            print(call)
                     p2 = subprocess.call(call,stdout = ms_pipe)
                 shutil.move(rundirpath + 'temp/' + mol_name + '.molinp', path_dictionary["molsimplify_inps"]+'/' + mol_name + '.molinp')
                 shutil.move(rundirpath + 'temp/' + mol_name + '.xyz', path_dictionary["initial_geo_path"] +'/'+ mol_name + '.xyz')
@@ -381,14 +364,13 @@ class TM_complex:
 
                 size = harvest_size(path_dictionary['initial_geo_path']+ '/'+mol_name+'.xyz')
                 with open(jobpath,'w') as newf:
+                    newf.writelines("run minimize \n")
                     with open(rundirpath + 'temp/' + mol_name + '.in','r') as oldf: 
                         for line in oldf:
-                            if not ("coordinates" in line) and (not "end" in line) and not ("scrdir" in line):
+                            if not ("coordinates" in line) and (not "end" in line) and not ("scrdir" in line) and (not "run" in line):
                                 newf.writelines(line)
-#                    newf.writelines("run minimize \n")
                     newf.writelines("min_coordinates cartesian \n")
-                    newf.writelines("scrdir scr/" + mol_name + "\n")
-                    newf.writelines("new_minizer yes\n")
+                    newf.writelines("scrdir scr/geo/" + mol_name + "\n")
                     self.choose_tolerances(size,newf) # fetch size-aware tolerances
                 os.remove(rundirpath + 'temp/' + mol_name + '.in')
         return jobpath

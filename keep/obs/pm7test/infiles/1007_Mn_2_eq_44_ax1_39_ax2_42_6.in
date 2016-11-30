@@ -1,0 +1,26 @@
+# file created with molSimplify
+levelshiftvalb 0.1
+levelshiftvala 1.0
+run minimize
+scf diis+a
+maxit 500
+levelshift yes
+gpus 1
+spinmult 6
+basis lacvps_ecp
+timings yes
+charge 0
+method ub3lyp
+min_coordinates cartesian 
+scrdir scr/1007_Mn_2_eq_44_ax1_39_ax2_42_6
+new_minizer yes
+min_converge_e 2.5e-6
+min_converge_grms 2.5e-4
+min_converge_gmax 5e-4
+min_converge_drms 1.5e-3
+min_converge_dmax 3e-3
+coordinates /home/jp/pm7test/initial_geo/1007_Mn_2_eq_44_ax1_39_ax2_42_6.xyz
+basis lacvps_ecp
+new_minimizer yes
+guess generate
+end

@@ -1,0 +1,19 @@
+# Input file generated from molSimplify at 11/29/2016 15:01
+-ligalign True
+-mopac True
+-rundir /home/jp/Dropbox/Main/optimal_mol_des/automated_search_one
+-qccode TeraChem
+-name 1003_mn_3_eq_2_ax1_2_ax2_2_5
+-coord 6
+-calccharge True
+-method UDFT
+-core mn
+-geometry oct
+-bcharge 0
+-ligloc True
+-spin 5
+-oxstate III
+-lig chloride,chloride,chloride,chloride,chloride,chloride
+-runtyp minimize
+-keepHs True,True,True,True,True,True
+-jobdir temp

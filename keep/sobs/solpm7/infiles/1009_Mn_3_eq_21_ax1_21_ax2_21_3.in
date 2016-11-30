@@ -1,0 +1,31 @@
+# file created with molSimplify
+levelshiftvalb 0.1
+levelshiftvala 1.0
+run minimize
+scf diis+a
+maxit 500
+levelshift yes
+gpus 1
+spinmult 3
+basis lacvps_ecp
+timings yes
+charge 3
+method ub3lyp
+min_coordinates cartesian 
+scrdir scr/1009_Mn_3_eq_21_ax1_21_ax2_21_3
+new_minizer yes
+min_converge_e 5e-6
+min_converge_grms 5e-4
+min_converge_gmax 1e-3
+min_converge_drms 1.5e-3
+min_converge_dmax 5e-3
+coordinates /home/jp/solpm7test/initial_geo/1009_Mn_3_eq_21_ax1_21_ax2_21_3.xyz
+pcm cosmo
+pcm_grid iswig
+epsilon 1.40
+print_ms yes
+pcm_radii read
+pcm_radii_file /scratch/jp/381335/pcm_radii
+new_minimizer yes
+guess generate
+end

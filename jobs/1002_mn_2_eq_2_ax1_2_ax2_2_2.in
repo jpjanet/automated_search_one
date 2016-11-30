@@ -1,0 +1,21 @@
+run minimize 
+# file created with molSimplify
+levelshiftvalb 0.1
+levelshiftvala 1.0
+scf diis+a
+maxit 500
+levelshift yes
+gpus 1
+spinmult 2
+basis lacvps_ecp
+timings yes
+charge -4
+method ub3lyp
+new_minimizer yes
+min_coordinates cartesian 
+scrdir scr/geo/1002_mn_2_eq_2_ax1_2_ax2_2_2
+min_converge_e 2.5e-6
+min_converge_grms 2.5e-4
+min_converge_gmax 5e-4
+min_converge_drms 1.5e-3
+min_converge_dmax 3e-3

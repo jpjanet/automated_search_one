@@ -1,0 +1,17 @@
+run minimize 
+# file created with molSimplify
+maxit 500
+timings yes
+gpus 1
+spinmult 1
+basis lacvps_ecp
+charge -3
+method b3lyp
+new_minimizer yes
+min_coordinates cartesian 
+scrdir scr/geo/1007_co_3_eq_2_ax1_2_ax2_2_1
+min_converge_e 2.5e-6
+min_converge_grms 2.5e-4
+min_converge_gmax 5e-4
+min_converge_drms 1.5e-3
+min_converge_dmax 3e-3
