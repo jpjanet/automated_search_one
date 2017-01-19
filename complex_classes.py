@@ -123,8 +123,11 @@ class TM_complex:
             ligs =[self.ligands_dict[j][0] for j in self.ax_inds]
             #print(ligs)
             self.ax_ligands = ligs
-
-
+        self.ax_inds = sorted(self.ax_inds)
+        self.ax_ligands = list()
+        for ind in self.ax_inds:
+            self.ax_ligands.append(self.ligands_dict[ind][0])
+        self._name_self()
 
     def examine(self):
         print("name is " + self.name)
@@ -178,6 +181,7 @@ class TM_complex:
                     break
                 else:
                     print('impossible, ax_dent  = ' + str(ax_dent))
+                    break
             else:
                 self.ax_ligands.append(self.ligands_dict[indices][0])
                 self.ax_inds.append(indices)
@@ -209,6 +213,11 @@ class TM_complex:
             #print(self.ax_inds)
             ligs =[self.ligands_dict[j][0] for j in self.ax_inds]
             #print(ligs)
+        self.ax_inds = sorted(self.ax_inds)
+        self.ax_ligands = list()
+        for ind in self.ax_inds:
+            self.ax_ligands.append(self.ligands_dict[ind][0])
+
         self._name_self()
         #print('final_ax_ind:'+ str(self.ax_inds))
 
@@ -367,7 +376,7 @@ class TM_complex:
                     newf.writelines("run minimize \n")
                     with open(rundirpath + 'temp/' + mol_name + '.in','r') as oldf: 
                         for line in oldf:
-                            if not ("coordinates" in line) and (not "end" in line) and not ("scrdir" in line) and (not "run" in line):
+                            if not ("coordinates" in line) and (not "end" in line) and not ("scrdir" in line) and not("run" in line) and not ("maxit" in line):
                                 newf.writelines(line)
                     newf.writelines("min_coordinates cartesian \n")
                     newf.writelines("scrdir scr/geo/" + mol_name + "\n")
@@ -402,6 +411,7 @@ class TM_complex:
 #susan.examine()
 
 #susan.generate_geometery(prefix = "te_",spin = 3) 
+
 
 
 

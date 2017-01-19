@@ -8,6 +8,8 @@ import argparse
 import os
 import random
 import shutil
+import time
+import itertools
 from prep_calc import *
 from complex_classes import *
 
@@ -54,10 +56,10 @@ class complex_generator:
                 this_complex = TM_complex(ID,this_metal,this_ox)
                 this_complex.random_gen()
                 this_complex.replace_equitorial(ligs[0])
-                this_complex.replace_axial(ligs[1])
+                this_complex.replace_axial(sorted(ligs[1]))
 #                print(this_complex.ax_inds)
                 this_gene = this_complex.name
-                print('this this_unique_name ', this_gene)
+                #print('this this_unique_name ', this_gene)
                 if not this_gene in self.unique_complex_dictionary.keys():
                    ## we can accept this complex
                    self.gene_id_dictionary[ID] = this_gene
@@ -69,23 +71,27 @@ class complex_generator:
                 ## fetch metal and oxidation state
                 this_metal= metal
                 this_ox = ox
-                print('metal is ' + str(this_metal))
-                print('this ox is ' + str(this_ox))
+                #print('metal is ' + str(this_metal))
+                #print('this ox is ' + str(this_ox))
                 # assign ID + generate
+                ligands_dict  = get_ligands()
                 ID = (1000+self.total_counter)
                 this_complex = TM_complex(ID,this_metal,this_ox)
                 this_complex.random_gen()
-                this_complex.replace_equitorial(ligs[0])
-                this_complex.replace_axial(ligs[1])
-                this_gene = this_complex.name
-                print('this this_unique_name ', this_gene)
-                if not this_gene in self.unique_complex_dictionary.keys():
-                   ## we can accept this complex
-                   self.gene_id_dictionary[ID] = this_gene
-                   self.unique_complex_dictionary[this_gene] = this_complex
-                   self.total_counter = self.total_counter + 1
-                self.configure_status(self.total_counter)
-                print('\n')
+                try:
+                    this_complex.replace_equitorial(ligs[0])
+                    this_complex.replace_axial(sorted(ligs[1]))
+                    this_gene = this_complex.name
+                    print('this this_unique_name ', this_gene)
+                    if not this_gene in self.unique_complex_dictionary.keys():
+                       ## we can accept this complex
+                       self.gene_id_dictionary[ID] = this_gene
+                       self.unique_complex_dictionary[this_gene] = this_complex
+                       self.total_counter = self.total_counter + 1
+                       self.configure_status(self.total_counter)
+                       print('\n')
+                except:
+                    print('cannot make eq: ' + ligands_dict[ligs[0][0]][0] + ' and ax ' + ligands_dict[ligs[1][0]][0] +  ' + '   + ligands_dict[ligs[1][1]][0])
 
         def random_metal(self):
             metals_list = get_metals()
@@ -143,7 +149,6 @@ class complex_generator:
                 ## first read gve info from base directory
                 state_path = self.base_path_dictionary["state_path"] +"current_status.csv"
                 emsg,read_dict = read_dictionary(state_path)
-                print(read_dict)
                 if emsg:
                         print(emsg)
                 self.configure_status(int(read_dict["total_counter"]))
@@ -164,6 +169,13 @@ class complex_generator:
                         print(emsg)
                 self.complex_convergence_dictionary = fit_dict
 
+
+
+        def update_complex_convergence_dictionary(self):
+                pass
+                
+
+        
         def assess_convergence(self):
             ## complex convergence dictionary is read in with self 
             ## get job_convergence_dictionary:
@@ -205,27 +217,33 @@ class complex_generator:
                                 ## generate HS/LS
                                 this_jobname = this_complex._generate_geometery(prefix = job_prefix, spin = these_spins[i])
                                 jobpaths.append(this_jobname)
-                set_outstanding_jobs(self.base_path_dictionary['job_path'],jobpaths)
+                set_outstanding_jobs(jobpaths)
 
 
 
-try_pop = complex_generator('Jenny')
+#try_pop = complex_generator('Jenny')
 #try_pop.populate_random(4)
-try_pop.write_state()
-try_pop.report()
+#try_pop.write_state()
+#try_pop.report()
 
 #second_pop=complex_generator('Justin')
 #second_pop.read_state()
+#allowed_ligands = [3,4,6,8,14,16,18,19,20,21,24,26,39,50,51,53,57,58,62,64]
 
-metals_list = get_metals()
-for metal_ind in [0,1,2,3,4] :
-    this_metal= metals_list[metal_ind]
-    allowed_states_dictionary = spin_dictionary()
-    allowed_ox =  allowed_states_dictionary[this_metal]
-    for ox in allowed_ox:
-        try_pop.populate_metal_ox_lig_combo(this_metal,ox,[[2],[2,2]])
-#    second_pop.populate_lig_combo([[i],[1, 1]])
-try_pop.assess_convergence()
+#allowed_ligands = [3,9,16,18,39]
+#metals_list = get_metals()
+#for metal_ind in [0,1,2,3] :
+#    this_metal= metals_list[metal_ind]
+#    allowed_states_dictionary = spin_dictionary()
+#    allowed_ox =  allowed_states_dictionary[this_metal]
+#    for l1 in allowed_ligands:
+#        for l2 in allowed_ligands:
+#            for l3 in allowed_ligands:
+#                for ox in allowed_ox:
+#                    try_pop.populate_metal_ox_lig_combo(this_metal,ox,[[l1],[l2,l3]])
+#try_pop.assess_convergence()
+#try_pop.write_state()
+#try_pop.report()
 #second_pop.populate_lig_combo([[27],[1, 1]])
 #second_pop.populate_lig_combo([[37],[1, 1]])
 #second_pop.populate_lig_combo([[35],[1, 1]])

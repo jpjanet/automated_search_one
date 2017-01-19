@@ -1,3 +1,0 @@
-/var/spool/sge/gibraltar-09/job_scripts/380360: line 60: [: missing `]'
-python: can't open file 'optgeo_extract.py': [Errno 2] No such file or directory
-mv: cannot move `/home/jp/pm7test/jobs/1006_Co_2_eq_37_ax1_11_ax2_0_2.in' to `/home/jp/pm7test/completejobs/1006_Co_2_eq_37_ax1_11_ax2_0_2.done/': Not a directory

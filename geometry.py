@@ -12,8 +12,8 @@ from numpy import arccos, cross, dot, pi
 from numpy import sin, cos, mat, array, arctan2
 from numpy.linalg import det, svd
 from math import pi ,sin, cos, sqrt
-from Classes.mol3D import mol3D
-from Classes.atom3D import atom3D
+from mol3D import mol3D
+from atom3D import atom3D
 
 
 ######################

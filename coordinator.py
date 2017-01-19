@@ -46,10 +46,10 @@ def wake_up_routine():
         return(new_pop)
 
 
-pop = initialize_complexes(2)
-pop.report()
+#pop = initialize_complexes(2)
+#pop.report()
 print('******************************')
-new_pop = wake_up_routine()
+#new_pop = wake_up_routine()
 #new_pop.report()
-new_pop = wake_up_routine()
+#new_pop = wake_up_routine()
 #new_pop.report()

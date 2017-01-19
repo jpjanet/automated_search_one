@@ -1,5 +1,0 @@
-coordinates /home/jp/pm7test/initial_geo/.xyz
-basis lacvps_ecp
-new_minimizer yes
-guess generate
-end

@@ -8,6 +8,7 @@ import random
 import string
 import numpy
 import pybel
+import subprocess
 from prep_calc import *
 from geometry import *
 from atom3D import *
@@ -77,11 +78,11 @@ class DFTRun:
         self.init_mol = init_mol
     def extract_prog(self):
             cmd_str = 'python optgeo_extract.py '+ self.scrpath + ' ' + self.progpath
-            print(cmd_str)
+ #           print(cmd_str)
             subprocess.call(cmd_str,shell=True)
     def extract_geo(self):
-            cmd_str = 'python optgeo_extract.py '+ self.scrpath + ' ' + self.optgeopath
-            print(cmd_str)
+            cmd_str = 'python optgeo_extract.py '+ self.scrpath + ' ' + self.geopath
+  #          print(cmd_str)
             subprocess.call(cmd_str,shell=True)
 
     def obtain_ML_dists(self):
@@ -92,12 +93,12 @@ class DFTRun:
         self.ox = ox
         self.spin = spin
         self.eqlig_ind = eqlig
-        self.axlig_ind = axlig2
-        self.ax2lig_ind = axlig1
+        self.axlig1_ind = axlig2
+        self.axlig2_ind = axlig1
         ligands_dict = get_ligands()
-        self.eqlig = get_ligands[self.eqlig_ind][0]
-        self.axlig1 = get_ligands[self.axlig1_ind][0]
-        self.axlig2 = get_ligands[self.axlig2_ind][0]
+        self.eqlig = ligands_dict[int(self.eqlig_ind)][0]
+        self.axlig1 = ligands_dict[int(self.axlig1_ind)][0]
+        self.axlig2 = ligands_dict[int(self.axlig2_ind)][0]
 
 class Comp:
     """ This is a class for each unique composition and configuration"""
@@ -121,9 +122,9 @@ class Comp:
         self.splitenergy = str((float(self.HSenergy) - float(self.LSenergy))*HF_to_Kcal_mol)
     def find_fitness(self):
         ref_value = 15.0
-        print(self.splitenergy)
+#        print(self.splitenergy)
         en =-1*numpy.power((float(self.splitenergy)/ref_value),2.0)
-        print(en)
+#        print(en)
         self.fitness = numpy.exp(en)
 
 def writeprops(extrct_props,startpoints,newfile,do_strip):
@@ -140,18 +141,24 @@ def scfextract(a_run,list_of_props):
 def test_terachem_go_convergence(job):
     ### get paths
     path_dictionary = setup_paths()
+    basic_path = get_run_dir()
     ID,low_name,base_name,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat,gene = translate_job_name(job)
     ### flag
     converged =  False
     geo_exists = False
-    this_run.converged = False
     ### test if geo exits
     this_run=DFTRun(base_name)
+    this_run.converged = False
+    this_run.geo_exists = False
     this_run.geopath = (path_dictionary["optimial_geo_path" ] + base_name + ".xyz")
-    this_run.geopath = (path_dictionary["progress_geo_path" ] + base_name + ".xyz")
+    this_run.progpath = (path_dictionary["progress_geo_path" ] + base_name + ".xyz")
+
     this_run.outpath = (path_dictionary["geo_out_path" ] + base_name + ".out")
     this_run.scrpath = (basic_path + 'scr/geo/' + base_name +"/optim.xyz")
-    this_run.configure(self,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
+    this_run.inpath = (basic_path + 'jobs/' + base_name +".in")
+    this_run.comppath = (basic_path + 'completejobs/' + base_name +".in")
+
+    this_run.configure(metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
     this_run.gene = gene
     this_run.ID = ID
     this_run.spin_cat = spin_cat
@@ -166,11 +173,8 @@ def test_terachem_go_convergence(job):
             found_data =False
             found_time = False 
             for i,lines in enumerate(data):
-                if str(lines).find('Converged!') != -1:
-                    found_conv = True
                 if str(lines).find('Optimization Converged.') != -1:
                    found_conv = True
-                   print(lines)
                 if str(lines).find('FINAL ENERGY') != -1:
                     this_run.energy =str(lines.split()[2])
                     found_data = True
@@ -185,10 +189,11 @@ def test_terachem_go_convergence(job):
             this_run.converged = True
             print('found all')
         if this_run.converged:
-                print('run converged')
+                print('run converged ' + str(this_run.name) + ' and now testing geoex ' )
                 if this_run.geo_exists:
                         print('geo exists for ' + this_run.name)
                 if not this_run.geo_exists:
+                        print('geoex not found at ' +str(this_run.geopath) +  ' for ' + this_run.name)
                         try:
                                 this_run.extract_geo()
                         except:
@@ -201,6 +206,10 @@ def test_terachem_go_convergence(job):
                                         this_run.obtain_rmsd()
                                 except:
                                         this_run.rmsd = "undef"
+                if not os.path.exists(this_run.comppath):
+                        print('this run does not have finished filese')
+                        shutil.copy(this_run.inpath,this_run.comppath)
+                        logger(path_dictionary['state_path'],str(datetime.datetime.now()) + " moving  " + str(this_run.name) + " to " + str(this_run.comppath))
         if not this_run.converged:
                 print(' \n job  ' + str(this_run.outpath) + ' not converged\n')
                 try:
@@ -213,13 +222,12 @@ def test_terachem_go_convergence(job):
 
                 except:
                         print("ERROR: scr not found for" + str(this_run.progpath))
-    print('run is returned')
     return this_run
 def test_terachem_sp_convergence(job):
     ### get paths
     path_dictionary = setup_paths()
     ## get job properties
-    base_name = os.path.basename(jobs)
+    base_name = os.path.basename(job)
     base_name = base_name.strip('.in')
     ID,low_name,base_name,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat,gene = translate_job_name(job)
 
@@ -229,7 +237,7 @@ def test_terachem_sp_convergence(job):
     this_run=DFTRun(base_name)
     this_run.outpath = (path_dictionary["vertical_out_path" ]  + base_name + ".out")
     print("checking ",this_run.outpath)
-    this_run.configure(self,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
+    this_run.configure(metal,ox,eqlig,axlig1,axlig2,spin,spin_cat)
     this_run.gene = gene
     this_run.ID = ID
     this_run.spin_cat = spin_cat

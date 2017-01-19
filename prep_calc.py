@@ -3,23 +3,25 @@ import os
 
 def ensure_dir(dir_path):
     if not os.path.exists(dir_path):
-        print('creating' + dir_path)
         os.makedirs(dir_path)
 ########################
 
 def get_run_dir():
-    rdir = "/home/jp/Dropbox/Main/optimal_mol_des/automated_search_one/" 
+    rdir = "/home/jp/redox_search/" 
     return rdir
 ########################
 
 def translate_job_name(job):
+    #print('job  = ' + str(job))
+
     base = os.path.basename(job)
     base = base.strip("\n")
+    #print('base  = ' + str(base))
     base_name = base.strip(".in")
     base_name = base_name.strip(".done")
-    print(base_name)
     low_name = str(base_name).lower()
     ll = (str(base_name)).split("_")
+    zoo = ll[0]
     ID = int(ll[0])
     metal = ll[1].lower()
     ox = int(ll[2])
@@ -37,6 +39,7 @@ def translate_job_name(job):
     elif spin == these_states[1]:
             spin_cat = 'HS'
     else:
+        print('spin assigned as ll[9]  = ' + str(spin) + ' on  ' +str(ll))
         print('critical erorr, unknown spin: '+ str(spin))
     gene = str(metal_ind) + '_' + str(ox) +'_'+ str(eqlig) + '_' + str(axlig1) + '_' + str(axlig2) 
     return ID,low_name,base_name,metal,ox,eqlig,axlig1,axlig2,spin,spin_cat,gene
@@ -56,7 +59,7 @@ def setup_paths():
                        "state_path"       : working_dir + "statespace/",
                        "molsimplify_inps" : working_dir + "ms_inps/",
                        "infiles"          : working_dir + "infiles/",
-                       "molsimp_path"     : "/home/jp/Dropbox/MyGit/molSimplify_dev/molSimplify/",
+                       "molsimp_path"     : "/home/jp/redox_search/",
                        "mopac_path"     : working_dir + "mopac/"}
 
     for keys in path_dictionary.keys():
@@ -65,7 +68,47 @@ def setup_paths():
 ########################
 
 def get_ligands():
-    ligands_dict =     [['vacant',[1]], #0
+        f_ligands_dict =     [['vacant',[1]], #0
+                       ['water',[1]],#1
+                       ['acetonitrile',[1]],#2
+                       ['imidazole',[1]],#3
+                       ['pph3',[1]],#4
+                       ['pyr',[1]],#5
+                       ['ammonia',[1]],#6
+                       ['carbonyl',[1]],#7
+                       ['thiane',[1]],#8
+                       ['furan',[1]],#24
+                       ['misc',[1]],#9
+                       ['chloropyridine',[1]],#14
+                       ['pisc',[1]],#10
+                       ['bipy',[2]],#11
+                       ['phen',[2]],#12
+                       ['en',[2]],#13
+                       ['dppe',[2]],#19
+                       ['pme3',[1]],#25
+                       ['phosphine',[1]],#26
+                       ['tetrahydrofuran',[1]],#27
+                       ['thiopyridine',[1]],#28
+                       ['mebipyridine',[2]],#29
+                       ['ethbipyridine',[2]],#30
+                       ['ethOHbipyridine',[2]],#31
+                       ['nitrobipyridine',[2]],#32
+                       ['phosacidbipyridine',[2]],#33
+                       ['sulfacidbipyridine',[2]],#34
+                       ['phendione',[2]],#35
+                       ['phenacac',[2]],#36
+                       ['tbisc',[1]],#37
+                       ['phenisc',[1]],#38
+                       ['porphyrin',[4]],#15
+                       ['phthalocyanine',[4]],#16
+                       ['cyclam',[4]],#17
+                       ['phenylcyc',[4]],#18
+                       ['corrolazine',[4]],#20
+                       ['cyclen',[4]],#21
+                       ['tbutylcyclen',[4]],#22
+                       ['cyanoaceticporphyrin',[4]]]
+
+        ligands_dict =     [['vacant',[1]], #0
                        ['thiocyanate',[1]], #1
                        ['chloride',[1]],#2
                        ['water',[1]],#3
@@ -83,12 +126,12 @@ def get_ligands():
                        ['cyanide',[1]],#15
                        ['carbonyl',[1]],#16
                        ['thiane',[1]],#17
-                      ['misc',[1]],#18
+                       ['misc',[1]],#18
                        ['pisc',[1]],#19
                        ['bipy',[2]],#20
                        ['phen',[2]],#21
                        ['ox',[2]],#22
-                       ['acac',[2]],#h
+                       ['acac',[2]],#23
                        ['en',[2]],#24
                        ['tbuc',[2]],#25
                        ['chloropyridine',[1]],#26
@@ -105,7 +148,6 @@ def get_ligands():
                        ['cyanoaceticporphyrin',[4]],#37
                        ['dicyanamide',[1]],#38
                        ['furan',[1]],#39
-#                       ['tcnoetOH',[1]],#39
                        ['methanethiol',[1]],#40
                        ['ethanethiol',[1]],#41
                        ['tbutylthiol',[1]],#42
@@ -116,28 +158,28 @@ def get_ligands():
                        ['propdiol',[2]],#47
                        ['amine',[1]],#48
                        ['uthiol',[1]],#49
-                       ['tetrahydrofuran',[1]],
-                       ['thiopyridine',[1]],
-                       ['mebipyridine',[2]],
-                       ['ethbipyridine',[2]],
-                       ['ethOHbipyridine',[2]],
-                       ['nitrobipyridine',[2]],
-                       ['phosacidbipyridine',[2]],
-                       ['sulfacidbipyridine',[2]],
-                       ['phendione',[2]],
-                       ['benzenethiol',[1]],
-                       ['benzenedithiol',[2]],
-                       ['quinoxalinedithiol',[2]],
-                       ['phenacac',[2]],
-                       ['tbisc',[1]],
-                       ['phenisc',[1]],
+                       ['tetrahydrofuran',[1]],#50
+                       ['thiopyridine',[1]],#51
+                       ['mebipyridine',[2]],#52
+                       ['ethbipyridine',[2]],#53
+                       ['ethOHbipyridine',[2]],#54
+                       ['nitrobipyridine',[2]],#55
+                       ['phosacidbipyridine',[2]],#56
+                       ['sulfacidbipyridine',[2]],#57
+                       ['phendione',[2]],#58
+                       ['benzenethiol',[1]],#59
+                       ['benzenedithiol',[2]],#60
+                       ['quinoxalinedithiol',[2]], #61
+                       ['phenacac',[2]],#62
+                       ['tbisc',[1]],#63
+                       ['phenisc',[1]],#64
                        ] #25}
         
-    return ligands_dict
+        return ligands_dict
 ########################
 
 def get_metals():
-        metals_list = ['cr','mn','fe','co','ni']
+        metals_list = ['cr','mn','fe','co']
         return metals_list
 ########################
 
@@ -145,8 +187,7 @@ def spin_dictionary():
     metal_spin_dictionary = {'co':{2:[2,4],3:[1,5]},
                               'cr':{2:[3,5],3:[2,4]},
                               'fe':{2:[1,5],3:[2,6]},
-                              'mn':{2:[2,6],3:[3,5]},
-                              'ni':{2:[1,3]}}
+                              'mn':{2:[2,6],3:[1,5]}}
     return metal_spin_dictionary
 ########################
 
@@ -199,11 +240,15 @@ def logger(path, message):
         f.write(message + "\n")
 ########################
 
-def set_outstanding_jobs(path,list_of_jobs):
+def set_outstanding_jobs(list_of_jobs):
+    path_dictionary = setup_paths()
+    path = path_dictionary['job_path']
     ensure_dir(path)
+    print('settting jobs to be ' + str(list_of_jobs))
     with open(path + '/outstanding_job_list.txt', 'w') as f:
         for jobs in list_of_jobs:
-            f.write(jobs + "\n")
+            f.write(jobs.strip("\n") + "\n")
+    print('written\n')
 ########################
 
 def get_outstanding_jobs():
@@ -219,7 +264,7 @@ def get_outstanding_jobs():
                 list_of_jobs.append(lines)
     return list_of_jobs
 ########################
-def find_submited_jobs():
+def find_submitted_jobs():
     path_dictionary = setup_paths()
     if os.path.exists(path_dictionary["job_path"]+"/submitted_jobs.csv"):
         emsg,submitted_job_dictionary = read_dictionary(path_dictionary["job_path"]+"/submitted_jobs.csv")
@@ -244,11 +289,14 @@ def find_converged_job_dictionary():
             emsg,converged_job_dictionary = read_dictionary(path_dictionary["job_path"]+"/converged_job_dictionary.csv")
     else:
        converged_job_dictionary = dict()
+    return converged_job_dictionary
 ########################
 def update_converged_job_dictionary(jobs,status):
         path_dictionary = setup_paths()
         converged_job_dictionary = find_converged_job_dictionary()
         converged_job_dictionary.update({jobs:status})
+        if status == 2:
+                print(' wrtiting job as s2 ' + str(jobs))
         write_dictionary(converged_job_dictionary,path_dictionary["job_path"]+"/converged_job_dictionary.csv")
 
 ########################
@@ -265,17 +313,5 @@ def harvest_size(filename):
     return size
 ########################
 
-def translate_job_name(job_name):
-        ll = str(job_name).strip('"''"')
-        ll = ll.strip('\n')
-        ID = int(ll[0])
-        metal = ll[1]
-        ox = int(ll[2])
-        eq_lig = int(ll[4])
-        ax1_lig = int(ll[6])
-        ax2_lig = int(ll[8])
-        spin = int(ll[9])
-
-        return ID,metal,ox,eq_lig,ax1_lig,ax2_lig,spin
-########################
+######################
 
